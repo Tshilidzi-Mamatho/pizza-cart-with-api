@@ -26,7 +26,7 @@ document.addEventListener('alpine:init', () => {
 
       createCart() {
         return axios
-          .get('https://pizza-cart-api.herokuapp.com/api/pizza-cart/create?username=')
+          .get('https://pizza-cart-api.herokuapp.com/api/pizza-cart/create?username='+ this.username)
       },
 
       showCart() {
@@ -43,6 +43,8 @@ document.addEventListener('alpine:init', () => {
         return `./images/${pizza.size}.jpg`
       },
 
+      message: 'PLACE YOUR PIZZA ORDER.',
+      username:'',
       pizzas: [],
       featuredpizzas: [],
       cartId: '',
@@ -102,10 +104,11 @@ document.addEventListener('alpine:init', () => {
             }
             else if (this.paymentAmount >= this.cart.total) {
               this.paymentMessage = 'Payment Sucessful!'
+              this.message= this.username  +" , paid for the pizza(s)!"
               setTimeout(() => {
                 this.cart.total = 0
                 window.location.reload()
-              }, 6000);
+              }, 9000);
 
             } else if (this.paymentAmount < this.cart.total) {
               this.paymentMessage = 'Sorry - Enter Enough Money.'

@@ -31,16 +31,19 @@
     <div class="body" x-data="pizzaCartWithAPIWidget">
         <b>
             <div class="deco">
-                <div x-text="message"></div>
-                <div><b>Cart ID : </b><strong x-text="cartId"></strong></div>
-                <div>
-                    <b>Number of Pizzas Loaded From API:</b><strong x-text="pizzas.length"></strong>
+                <div class="c1" x-text="message"></div>
+                <div class="c2">
+                    <b>Customer Name:</b> <input type="text" x-model="username" placeholder="Enter Customer Name">
+                </div>
+                <div class="c3"><b>Cart ID:   </b><strong x-text="cartId"></strong></div>
+                <div class="c4">
+                    <b>Number of Pizzas Loaded From API:   </b><strong x-text="pizzas.length"></strong>
                 </div>
 
         </b>
     </div>
 
-    <div>
+    <div class="acart">
 
 
         <div x-show="cart.total.toFixed(2)>0" class="cart">
@@ -106,6 +109,8 @@
             </table>
         </div>
     </div>
+
+    <!--
     <div class="featuredbox">
         <template x-for="pizza in cart.pizzas">
             <div class="featuredpizza">
@@ -120,7 +125,7 @@
                 <button x-on:click="add(pizza)"><b>Buy</b></button>
             </div>
         </template>
-    </div>
+    </div>-->
 
     <div class="apilistpizza">
         <table>

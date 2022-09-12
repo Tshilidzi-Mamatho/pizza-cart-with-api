@@ -1,16 +1,24 @@
 body {
     background-color: lightslategray;
 }
+.c1,.c2,.c3,.c4{
+    margin-top: 0.7em;
+}
 
 .deco {
     text-align: justify;
     display: flex;
+    padding: 1em;
+}
+
+.acart{
+    padding-bottom: 2em;
 }
 
 .header {
     border: solid 1px;
     background-color: lightblue;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 .bName {
@@ -48,21 +56,28 @@ body {
     display: flex;
     justify-content: end;
 }
+.featuredbox{
+    display: flex;
+    justify-content: center;
+   
+}
 
-.featuredpizza {
-    margin: 1em;
-    padding: 1em;
+/*.featuredpizza {
+    margin: 0.01em;
+    align-content: center;
+   padding: 1em;
     background-color: lightgray;
     border: 0.2em;
-    border-radius: 0.5em;
-    width: 80%;
-}
+    border-radius: 0.01em;
+    width: 70%;
+}*/
 
 table {
     border: 2px solid black;
     border-collapse: collapse;
-    width: 80%;
+    width: 98.5%;
     margin: auto;
+    border-radius: 1em;
 }
 
 td {
@@ -79,6 +94,7 @@ td {
 
 .apilistpizza {
     border-radius: 1em;
+    padding: 0.01em;
 }
 
 .cart-box {
@@ -99,16 +115,16 @@ td {
 @media (min-width: 760px) {
     .featuredbox {
         display: flex;
-        padding: 1em;
+        /*padding: 1em;*/
         margin: 1em;
     }
 }
 
 .footer {
     background-color: brown;
-    border: 1px solid;
-    border-radius: 1em;
-    padding: 0.5em;
+    border: solid 1px;
+    border-radius: 0.5em;
+    /*padding: 0.5em;*/
     margin: 0.5em;
 }
 
